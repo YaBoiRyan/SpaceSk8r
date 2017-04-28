@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour {
 	{
 		boardVelocity = BoardRigidbody.velocity;
 		boardRotation = BoardRigidbody.rotation;
-		Debug.Log (deathToggle);
 		//moves character
 		BoardRigidbody.AddRelativeForce (transform.right * speed);
 
@@ -49,16 +48,10 @@ public class PlayerController : MonoBehaviour {
 				if (rayHit.collider.tag == "Ground") 
 				{
 					transform.rotation = Quaternion.Euler (0, 0, 0);
-					BoardRigidbody.AddRelativeForce (transform.up * 200);
+					BoardRigidbody.AddRelativeForce (transform.up * 500);
 				}
 			}
 		}
-		Debug.DrawLine(rayHit.point, transform.position , Color.red);
-		//if(onGround == true && Input.GetAxisRaw ("Vertical") == 1)
-		//{
-			//transform.rotation = Quaternion.Euler(0, 0, 0);
-			//BoardRigidbody.AddRelativeForce (transform.up * 200);
-		//}
 			
 		//failure states
 
@@ -76,21 +69,6 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-	/*void OnCollisionEnter2D (Collision2D otherObject)
-	{
-		if (otherObject.gameObject.tag == "Ground") 
-		{
-			onGround = true;
-		}
-	}
 
-	void OnCollisionExit2D (Collision2D otherObject)
-	{
-		if (otherObject.gameObject.tag == "Ground") 
-		{
-			onGround = false;
-		}
-	}
-*/
 
 }

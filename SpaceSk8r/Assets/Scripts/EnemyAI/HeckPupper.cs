@@ -9,7 +9,7 @@ public class HeckPupper : MonoBehaviour {
 	Transform myTransform;
 
 	public GameObject myProjectile;
-	float shootCooldown = 2;
+	float shootCooldown = 5;
 	bool isHidden;
 	Vector3 bulletPosition;
 	SpriteRenderer mySprite;
