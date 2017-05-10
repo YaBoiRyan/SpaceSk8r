@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeckPupper : MonoBehaviour {
+public class HeckPupper_Behaviour : MonoBehaviour {
 
 
 	Transform playerTransform;

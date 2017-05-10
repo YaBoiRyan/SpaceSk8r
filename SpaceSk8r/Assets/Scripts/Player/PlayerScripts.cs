@@ -24,9 +24,6 @@ public class PlayerScripts : MonoBehaviour {
 			PlayerController.deathToggle = false;
 
 		}
-
-
-
 	}
 
 
@@ -36,6 +33,10 @@ public class PlayerScripts : MonoBehaviour {
 		{
 			currency = currency + 1;
 			Destroy (otherObject.gameObject);
+		}
+		if (otherObject.gameObject.tag == "Ground") 
+		{
+			PlayerController.deathToggle = true;
 		}
 	}
 
@@ -49,7 +50,5 @@ public class PlayerScripts : MonoBehaviour {
 			//if trick = etc
 
 		}
-
-
 	}
 }
